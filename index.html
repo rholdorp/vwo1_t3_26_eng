@@ -114,149 +114,151 @@ const COL = "#E63946";
 const bdr = "rgba(255,255,255,0.06)", cBg = "rgba(255,255,255,0.04)";
 
 // ===== DATA — Unit 4 & 5 vocabulary =====
-// Format: [English, Dutch]. Use "/" to mark alternative accepted answers.
+// Format: [English, Dutch_woord, Nederlandse omschrijving].
+// "/" in het tweede veld = alternatieve goede vertalingen voor de woordenlijst.
+// Het derde veld wordt gebruikt voor de toets/oefenvragen (Stijn typt Engels).
 
 // Unit 4 — Dieren
 const DIEREN = [
-  ["bear","de beer/beer"],
-  ["budgie","de parkiet/parkiet"],
-  ["butterfly","de vlinder/vlinder"],
-  ["cat","de kat/kat"],
-  ["chicken","de kip/kip"],
-  ["cow","de koe/koe"],
-  ["dog","de hond/hond"],
-  ["eagle","de adelaar/adelaar"],
-  ["elephant","de olifant/olifant"],
-  ["fish","de vis/vis"],
-  ["fox","de vos/vos"],
-  ["giraffe","de giraffe/giraffe"],
-  ["guinea pig","de cavia/cavia"],
-  ["hamster","de hamster/hamster"],
-  ["horse","het paard/paard"],
-  ["lizard","de hagedis/hagedis"],
-  ["monkey","de aap/aap"],
-  ["mouse","de muis/muis"],
-  ["parrot","de papegaai/papegaai"],
-  ["pig","het varken/varken"],
-  ["rabbit","het konijn/konijn"],
-  ["sheep","het schaap/schaap"],
-  ["snake","de slang/slang"],
-  ["spider","de spin/spin"],
-  ["tiger","de tijger/tijger"],
-  ["tortoise","de schildpad/schildpad"],
-  ["whale","de walvis/walvis"],
-  ["wolf","de wolf/wolf"],
+  ["bear","de beer","een groot wild dier met dikke vacht"],
+  ["budgie","de parkiet","een klein blauw of groen vogeltje dat mensen vaak als huisdier houden"],
+  ["butterfly","de vlinder","een insect met grote gekleurde vleugels"],
+  ["cat","de kat","een klein dier met zachte vacht dat mensen als huisdier houden"],
+  ["chicken","de kip","een vogel die mensen vaak houden voor zijn eieren en zijn vlees"],
+  ["cow","de koe","een groot vrouwelijk boerderijdier"],
+  ["dog","de hond","een dier dat veel mensen als huisdier houden of om gebouwen te bewaken"],
+  ["eagle","de adelaar","een grote vogel die heel goed kan zien"],
+  ["elephant","de olifant","een heel groot wild dier uit Afrika of Azië, met een lange slurf"],
+  ["fish","de vis","een dier dat in het water leeft en daar ademt"],
+  ["fox","de vos","een wild dier dat lijkt op een kleine hond, met een lange dikke staart en rode vacht"],
+  ["giraffe","de giraffe","een groot dier uit Afrika met een hele lange nek"],
+  ["guinea pig","de cavia","een klein dier met korte oren en geen staart, vaak als huisdier"],
+  ["hamster","de hamster","een klein dier dat mensen vaak als huisdier houden, met wangzakjes"],
+  ["horse","het paard","een groot dier dat mensen kan dragen en zware dingen kan trekken"],
+  ["lizard","de hagedis","een klein dier met vier poten, een lange staart en ruwe huid"],
+  ["monkey","de aap","een dier met een lange staart dat in bomen kan klimmen"],
+  ["mouse","de muis","een klein dier met een lange staart, woont vaak in huizen"],
+  ["parrot","de papegaai","een vogel met heel felle veren die kan nazeggen wat mensen zeggen"],
+  ["pig","het varken","een dik dier dat mensen op boerderijen houden voor zijn vlees"],
+  ["rabbit","het konijn","een klein dier met lange oren"],
+  ["sheep","het schaap","een dier dat mensen op boerderijen houden voor zijn vlees en zijn wol"],
+  ["snake","de slang","een dier met een lang dun lichaam en geen poten"],
+  ["spider","de spin","een klein dier met acht poten dat insecten vangt en eet"],
+  ["tiger","de tijger","een wild dier dat lijkt op een grote kat, met gele vacht en zwarte strepen"],
+  ["tortoise","de schildpad","een dier met een hard schild op zijn rug dat heel langzaam beweegt"],
+  ["whale","de walvis","een heel groot dier dat in de zee leeft en lijkt op een hele grote vis"],
+  ["wolf","de wolf","een wild dier dat lijkt op een grote hond"],
 ];
 
 // Unit 4 — Natuur & landschap
 const NATUUR = [
-  ["background","de achtergrond/achtergrond"],
-  ["cactus","de cactus/cactus"],
-  ["centre","het midden/midden/het centrum/centrum"],
-  ["cloud","de wolk/wolk"],
-  ["desert","de woestijn/woestijn"],
-  ["flower","de bloem/bloem"],
-  ["foreground","de voorgrond/voorgrond"],
-  ["forest","het bos/bos"],
-  ["grass","het gras/gras"],
-  ["grassland","het grasland/grasland"],
-  ["ice","het ijs/ijs"],
-  ["(on the) left","links/aan de linkerkant"],
-  ["(in the) middle","in het midden/het midden/midden"],
-  ["mountain","de berg/berg"],
-  ["plant","de plant/plant"],
-  ["(on the) right","rechts/aan de rechterkant"],
-  ["rock","de rots/rots"],
-  ["sand","het zand/zand"],
-  ["tree","de boom/boom"],
+  ["background","de achtergrond","het deel achteraan op een foto of plaatje"],
+  ["cactus","de cactus","een plant met scherpe stekels die in hete droge gebieden groeit"],
+  ["centre","het midden","het deel in het midden van iets"],
+  ["cloud","de wolk","een witte of grijze vorm in de lucht, gemaakt van kleine waterdruppels"],
+  ["desert","de woestijn","een groot droog gebied met heel weinig planten"],
+  ["flower","de bloem","het felgekleurde deel van een plant dat vóór de zaden of vruchten komt"],
+  ["foreground","de voorgrond","het deel van een plaatje dat het dichtst bij je lijkt"],
+  ["forest","het bos","een groot gebied bedekt met bomen"],
+  ["grass","het gras","een plant met dunne groene bladeren die velden en tuinen bedekt"],
+  ["grassland","het grasland","een groot gebied waar gras groeit"],
+  ["ice","het ijs","water dat hard geworden is omdat het bevroren is"],
+  ["(on the) left","links / aan de linkerkant","de linkerkant of richting"],
+  ["(in the) middle","in het midden","het deel dat even ver van de zijkanten of uiteinden is"],
+  ["mountain","de berg","een heel hoge heuvel"],
+  ["plant","de plant","alles wat uit de grond groeit"],
+  ["(on the) right","rechts / aan de rechterkant","de rechterkant of richting"],
+  ["rock","de rots","het hele harde materiaal dat in de grond en in bergen zit"],
+  ["sand","het zand","poeder gemaakt van hele kleine stukjes rots"],
+  ["tree","de boom","een grote plant met een stam en takken die heel lang kan leven"],
 ];
 
 // Unit 4 — Weer
 const WEER = [
-  ["cloudy","bewolkt"],
-  ["cold","koud"],
-  ["cool","koel"],
-  ["hot","heet/warm"],
-  ["rainy","regenachtig"],
-  ["snow","de sneeuw/sneeuw"],
-  ["snowy","besneeuwd"],
-  ["stormy","stormachtig"],
-  ["sunny","zonnig"],
-  ["warm","warm"],
-  ["windy","winderig"],
+  ["cloudy","bewolkt","als het weer dit is, is de lucht vol wolken"],
+  ["cold","koud","niet heet of warm; met een lage temperatuur"],
+  ["cool","koel","een beetje koud; niet heet of warm"],
+  ["hot","heet / warm","met een hoge temperatuur"],
+  ["rainy","regenachtig","met veel regen"],
+  ["snow","de sneeuw","zachte witte stukjes bevroren water die uit de lucht vallen"],
+  ["snowy","besneeuwd","met veel sneeuw"],
+  ["stormy","stormachtig","met sterke wind en regen"],
+  ["sunny","zonnig","helder en warm, met licht van de zon"],
+  ["warm","warm","met een aangename temperatuur die vrij hoog is"],
+  ["windy","winderig","met veel wind"],
 ];
 
 // Unit 4 — Sport & activiteiten
 const SPORT = [
-  ["bite","bijten"],
-  ["bouldering","boulderen"],
-  ["bungee jumping","bungeejumpen"],
-  ["carry","dragen"],
-  ["caving","grotklimmen/speleologie"],
-  ["dig","graven"],
-  ["diving","duiken"],
-  ["follow","volgen"],
-  ["horse riding","paardrijden"],
-  ["hunt","jagen"],
-  ["look for","zoeken/zoeken naar"],
-  ["mountain biking","mountainbiken"],
-  ["run away","wegrennen/weglopen"],
-  ["snowboarding","snowboarden"],
-  ["surfing","surfen"],
-  ["white water rafting","wildwaterraften/raften"],
-  ["zorbing","zorben"],
+  ["bite","bijten","als een insect of slang dit bij je doet, drukt het een klein scherp deel in je huid"],
+  ["bouldering","boulderen","de sport van rotsklimmen op lage rotsen zonder speciale uitrusting"],
+  ["bungee jumping","bungeejumpen","een sport waarbij je van een hoge plek springt (bv. een brug) met een dik elastiek"],
+  ["carry","dragen","iets vasthouden en naar een andere plek brengen"],
+  ["caving","grotklimmen / speleologie","de sport van lopen en klimmen door grotten onder de grond"],
+  ["dig","graven","aarde verplaatsen en een gat in de grond maken"],
+  ["diving","duiken","de sport van onder water zwemmen met ademuitrusting"],
+  ["follow","volgen","achter iemand of iets aan komen of gaan"],
+  ["horse riding","paardrijden","de sport of activiteit van op een paard rijden voor je plezier"],
+  ["hunt","jagen","dieren achtervolgen om ze te doden voor voedsel"],
+  ["look for","zoeken (naar)","proberen iets te vinden"],
+  ["mountain biking","mountainbiken","de sport van fietsen met een sterk frame en brede banden, op ruig terrein"],
+  ["run away","wegrennen / weglopen","snel weggaan van iemand of iets"],
+  ["snowboarding","snowboarden","de sport van bergafwaarts gaan in de sneeuw op een grote plank"],
+  ["surfing","surfen","de sport van op golven rijden terwijl je op een plank staat"],
+  ["white water rafting","wildwaterraften","de sport van in een rubberboot een snelstromende rivier afvaren"],
+  ["zorbing","zorben","de sport van in een grote doorzichtige plastic bal van een heuvel afrollen"],
 ];
 
 // Unit 5 — Eten
 const ETEN = [
-  ["bread","het brood/brood"],
-  ["carrot","de wortel/wortel"],
-  ["cheese","de kaas/kaas"],
-  ["chocolate","de chocolade/chocolade"],
-  ["chocolate cake","de chocoladetaart/chocoladetaart/de chocoladecake/chocoladecake"],
-  ["coffee","de koffie/koffie"],
-  ["cream","de slagroom/slagroom/de room/room"],
-  ["crisps","de chips/chips"],
-  ["cucumber","de komkommer/komkommer"],
-  ["fruit salad","de fruitsalade/fruitsalade"],
-  ["grape","de druif/druif"],
-  ["ham sandwich","het broodje ham/broodje ham"],
-  ["ice cream","het ijs/ijs/het ijsje/ijsje"],
-  ["ketchup","de ketchup/ketchup"],
-  ["lettuce","de sla/sla"],
-  ["mushroom","de paddenstoel/paddenstoel/de champignon/champignon"],
-  ["mushroom pizza","de paddenstoelenpizza/paddenstoelenpizza/de champignonpizza/champignonpizza"],
-  ["nut","de noot/noot"],
-  ["olive oil","de olijfolie/olijfolie"],
-  ["onion","de ui/ui"],
+  ["bread","het brood","voedsel gemaakt van meel en gebakken in een oven"],
+  ["carrot","de wortel","een lange dunne oranje groente die onder de grond groeit"],
+  ["cheese","de kaas","een geel of wit voedsel gemaakt van melk"],
+  ["chocolate","de chocolade","een zoet bruin voedsel gemaakt van cacaobonen"],
+  ["chocolate cake","de chocoladetaart","een zoete cake gemaakt van meel, eieren, suiker, boter en chocola"],
+  ["coffee","de koffie","een bruine drank die je maakt door water bij een poeder te doen"],
+  ["cream","de slagroom / room","de dikke vloeistof bovenop melk"],
+  ["crisps","de chips","hele dunne stukjes aardappel in hete olie gebakken, uit een zakje"],
+  ["cucumber","de komkommer","een lange groente met een groene schil"],
+  ["fruit salad","de fruitsalade","een mengsel van bereide vruchten dat je als dessert eet"],
+  ["grape","de druif","een kleine groene of paarse vrucht waar je ook wijn van maakt"],
+  ["ham sandwich","het broodje ham","twee boterhammen met een plak ham ertussen"],
+  ["ice cream","het ijs / het ijsje","heel koud zoet voedsel gemaakt van melk"],
+  ["ketchup","de ketchup","een koude saus gemaakt van tomaten"],
+  ["lettuce","de sla","een plant met grote groene bladeren die je koud in salades eet"],
+  ["mushroom","de paddenstoel / champignon","een plant met een platte hoed en geen bladeren die je als groente kunt eten"],
+  ["mushroom pizza","de paddenstoelenpizza","een platte ronde bodem met tomaten, kaas en paddenstoelen erop"],
+  ["nut","de noot","een droge vrucht met een harde buitenkant en een zaadje binnenin"],
+  ["olive oil","de olijfolie","olie die uit olijven geperst wordt"],
+  ["onion","de ui","een ronde groente met veel lagen en een sterke geur"],
 ];
 
 // Unit 5 — Verpakkingen & hoeveelheden
 const VERPAKKING = [
-  ["a bottle of water","een fles water/fles water"],
-  ["bowl","de kom/kom"],
-  ["a can of coke","een blikje cola/blikje cola"],
-  ["a carton of juice","een pak sap/pak sap"],
-  ["cup","het kopje/kopje/de kop/kop"],
-  ["fork","de vork/vork"],
-  ["glass","het glas/glas"],
-  ["a jar of jam","een pot jam/pot jam"],
-  ["jug","de kan/kan"],
-  ["a kilo of apples","een kilo appels/kilo appels"],
-  ["knife","het mes/mes"],
-  ["a litre of oil","een liter olie/liter olie"],
-  ["a loaf of bread","een brood/brood/een heel brood"],
-  ["mug","de mok/mok/de beker/beker"],
+  ["a bottle of water","een fles water","een glazen of plastic verpakking met een dun bovendeel, gevuld met water"],
+  ["bowl","de kom","een diepe ronde schaal voor eten of vloeistof"],
+  ["a can of coke","een blikje cola","een metalen verpakking gevuld met cola"],
+  ["a carton of juice","een pak sap","een verpakking van dik papier (karton) gevuld met sap"],
+  ["cup","het kopje","een klein rond bekertje met een oortje"],
+  ["fork","de vork","een keukenvoorwerp met lange puntjes aan één kant"],
+  ["glass","het glas","een beker zonder oor, gemaakt van glas"],
+  ["a jar of jam","een pot jam","een glazen verpakking gevuld met jam"],
+  ["jug","de kan","een kan met een handvat om vloeistof in te bewaren of uit te schenken"],
+  ["a kilo of apples","een kilo appels","1000 gram appels"],
+  ["knife","het mes","een scherp metalen voorwerp met een handvat om mee te snijden"],
+  ["a litre of oil","een liter olie","een maat voor vloeistof (1000 ml) olie"],
+  ["a loaf of bread","een brood","brood dat in één heel stuk gebakken is"],
+  ["mug","de mok / beker","een grote beker met rechte zijkanten"],
 ];
 
 // Unit 5 — Bijvoeglijke naamwoorden (smaak/mening)
 const BIJV = [
-  ["boring","saai"],
-  ["delicious","heerlijk/lekker"],
-  ["disgusting","vies/walgelijk"],
-  ["exciting","spannend"],
-  ["interesting","interessant"],
-  ["lovely","heerlijk/mooi/leuk"],
+  ["boring","saai","niet interessant"],
+  ["delicious","heerlijk / lekker","heel lekker om te eten"],
+  ["disgusting","vies / walgelijk","heel onaangenaam, walgelijk"],
+  ["exciting","spannend","iets dat sterke gevoelens van blijheid en enthousiasme geeft"],
+  ["interesting","interessant","leuk en boeiend, het houdt je aandacht vast"],
+  ["lovely","heerlijk / mooi / leuk","mooi of heel aardig / leuk"],
 ];
 
 const SECTIONS = [
@@ -298,35 +300,28 @@ function checkAnswer(input, correctStr){
 }
 
 // ===== QUESTION GENERATORS =====
+// Vragen tonen altijd de Nederlandse omschrijving, antwoord = Engels woord.
+function makeDescQ(en, desc, secId){
+  return {
+    q: "Welk Engels woord wordt hier omschreven?\n\n" + desc,
+    a: en,
+    secId
+  };
+}
 function makeMixedQs(list, secId, n){
-  const shuffled = [...list].sort(()=>Math.random()-0.5).slice(0,n);
-  return shuffled.map(([en,nl])=>{
-    if(Math.random() < 0.5){
-      return {q:"Wat betekent:\n"+en, a:nl, secId};
-    } else {
-      // For NL→EN, show only the cleanest Dutch form (first alternative)
-      const cue = nl.split("/")[0];
-      return {q:"Vertaal naar het Engels:\n"+cue, a:en, secId};
-    }
-  });
+  return [...list].sort(()=>Math.random()-0.5).slice(0,n)
+    .map(([en, nl, desc]) => makeDescQ(en, desc, secId));
 }
 function makeAllQs(n){
   const pool = [];
   SECTIONS.filter(s=>s.data).forEach(sec=>{
     sec.data.forEach(pair=>pool.push({pair, secId:sec.id}));
   });
-  const picked = pool.sort(()=>Math.random()-0.5).slice(0, n);
-  return picked.map(({pair:[en,nl], secId})=>{
-    if(Math.random() < 0.5){
-      return {q:"Wat betekent:\n"+en, a:nl, secId};
-    } else {
-      const cue = nl.split("/")[0];
-      return {q:"Vertaal naar het Engels:\n"+cue, a:en, secId};
-    }
-  });
+  return pool.sort(()=>Math.random()-0.5).slice(0, n)
+    .map(({pair:[en, nl, desc], secId}) => makeDescQ(en, desc, secId));
 }
 function genToetsQs(){
-  // Mix from each section
+  // Mix uit elke sectie
   const qs = [
     ...makeMixedQs(DIEREN, "dieren", 3),
     ...makeMixedQs(NATUUR, "natuur", 2),
@@ -340,71 +335,71 @@ function genToetsQs(){
 }
 
 // ===== THEORY =====
+// Toon woord, NL-vertaling én NL-omschrijving als studiereferentie.
 function wordListText(list){
-  return list.map(([en,nl])=>{
-    const cleanNl = nl.split("/")[0];
-    return "**"+en+"** = "+cleanNl;
-  }).join("\n");
+  return list.map(([en, nl, desc])=>{
+    return "**"+en+"** = "+nl+"\n   _("+desc+")_";
+  }).join("\n\n");
 }
 
 const THEORY = {
   dieren: [
     {type:"explain", title:"Dieren — Animals",
-     text:"De dieren uit Unit 4. Tip: lees ze eerst rustig door en oefen daarna.\n\n"+wordListText(DIEREN)},
-    {type:"check", question:"Wat betekent 'butterfly'?", answer:"de vlinder/vlinder", hint:"Een insect met grote gekleurde vleugels"},
-    {type:"check", question:"Vertaal naar het Engels: het paard", answer:"horse", hint:"Een groot dier waar je op kunt rijden"},
-    {type:"check", question:"Wat betekent 'tortoise'?", answer:"de schildpad/schildpad", hint:"Heeft een hard schild op zijn rug"},
+     text:"De dieren uit Unit 4. Tip: lees ze rustig door — bij oefenen krijg je alleen de Nederlandse omschrijving en moet je het Engelse woord typen.\n\n"+wordListText(DIEREN)},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen insect met grote gekleurde vleugels", answer:"butterfly", hint:"Begint met B"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen groot dier dat mensen kan dragen en zware dingen kan trekken", answer:"horse", hint:"Klinkt als 'hors'"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen dier met een hard schild op zijn rug dat heel langzaam beweegt", answer:"tortoise", hint:"Schildpad"},
   ],
   natuur: [
     {type:"explain", title:"Natuur & landschap — Nature",
      text:"Woorden om landschappen en plekken in een foto te beschrijven.\n\n"+wordListText(NATUUR)},
     {type:"explain", title:"Voorbeeldzinnen",
      text:"→ This is a photo of my house with the mountains in the **background**.\n→ The man in the **foreground** is my father.\n→ Our house is on the **left** as you enter the village.\n→ I'm in the **middle** of my class photo.\n→ I crossed the Sahara **desert** on foot."},
-    {type:"check", question:"Wat is 'mountain' in het Nederlands?", answer:"de berg/berg", hint:"Een hele hoge heuvel"},
-    {type:"check", question:"Vertaal naar het Engels: de woestijn", answer:"desert", hint:"Een grote droge zandvlakte"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen heel hoge heuvel", answer:"mountain", hint:"Begint met M"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen groot droog gebied met heel weinig planten", answer:"desert", hint:"Sahara"},
   ],
   weer: [
     {type:"explain", title:"Het weer — Weather",
      text:"Bijvoeglijke naamwoorden + 'snow' om het weer te beschrijven.\n\n"+wordListText(WEER)},
     {type:"explain", title:"Voorbeeldzinnen",
      text:"→ It's **cold** outside — put your coat on!\n→ Tomorrow will be **warm** and **sunny**.\n→ The day will be **cloudy**, with occasional heavy showers.\n→ The plane was delayed due to **stormy** weather.\n→ It's very **windy** today!\n\nLet op: **snow** is een zelfstandig naamwoord (de sneeuw), **snowy** is bijvoeglijk (besneeuwd)."},
-    {type:"check", question:"Wat betekent 'windy'?", answer:"winderig", hint:"Veel wind"},
-    {type:"check", question:"Vertaal: bewolkt", answer:"cloudy", hint:"Cloud + y"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nmet veel wind", answer:"windy", hint:"wind + y"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nals het weer dit is, is de lucht vol wolken", answer:"cloudy", hint:"cloud + y"},
   ],
   sport: [
     {type:"explain", title:"Sport & activiteiten",
      text:"Werkwoorden en sporten — let op de -ing vormen (de sport zelf eindigt vaak op -ing).\n\n"+wordListText(SPORT)},
     {type:"explain", title:"Voorbeeldzinnen",
      text:"→ Have you ever tried **bungee jumping**?\n→ I **carried** my bag upstairs.\n→ Kate goes **horse riding** at the weekends.\n→ Young lions learn to **hunt** for food.\n→ I'm **looking for** my keys.\n→ The rabbit **ran away** from the dog."},
-    {type:"check", question:"Wat betekent 'dig'?", answer:"graven", hint:"Een gat maken in de grond"},
-    {type:"check", question:"Vertaal: zoeken naar", answer:"look for", hint:"Twee woorden"},
-    {type:"check", question:"Wat betekent 'follow'?", answer:"volgen", hint:"Achter iemand aan gaan"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\naarde verplaatsen en een gat in de grond maken", answer:"dig", hint:"3 letters"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nproberen iets te vinden", answer:"look for", hint:"Twee woorden, met 'for'"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nachter iemand of iets aan komen of gaan", answer:"follow", hint:"Begint met F"},
   ],
   eten: [
     {type:"explain", title:"Eten — Food",
      text:"Eten en drinken uit Unit 5.\n\n"+wordListText(ETEN)},
     {type:"explain", title:"Voorbeeldzinnen",
-     text:"→ I like **bread** and butter with my soup.\n→ I'd like a kilo of **carrots**, please.\n→ Do you like **chocolate**?\n→ We had **strawberries** and **cream** for dessert.\n→ Slice the **cucumber** and add it to the salad.\n→ Would you like **ketchup** on your chips?"},
-    {type:"check", question:"Wat betekent 'lettuce'?", answer:"de sla/sla", hint:"Groen blad, gebruikt in salade"},
-    {type:"check", question:"Vertaal: de ui", answer:"onion", hint:"Een ronde groente waar je van moet huilen"},
-    {type:"check", question:"Wat betekent 'crisps'?", answer:"de chips/chips", hint:"Hartig snackje uit een zak"},
+     text:"→ I like **bread** and butter with my soup.\n→ I'd like a kilo of **carrots**, please.\n→ Do you like **chocolate**?\n→ We had strawberries and **cream** for dessert.\n→ Slice the **cucumber** and add it to the salad.\n→ Would you like **ketchup** on your chips?"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen plant met grote groene bladeren die je koud in salades eet", answer:"lettuce", hint:"NIET 'salad'"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen ronde groente met veel lagen en een sterke geur", answer:"onion", hint:"Begint met O"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nhele dunne stukjes aardappel in hete olie gebakken, uit een zakje", answer:"crisps", hint:"Britse variant van 'chips'"},
   ],
   verpakking: [
     {type:"explain", title:"Verpakkingen & hoeveelheden",
      text:"Hoe vraag je naar een verpakking of hoeveelheid van iets?\n\n"+wordListText(VERPAKKING)},
     {type:"explain", title:"Voorbeeldzinnen",
      text:"→ They drank two **bottles of water**.\n→ I had a **bowl of soup** for lunch.\n→ Can I have a **can of coke**, please?\n→ I'll open a new **carton of juice**.\n→ I need a sharp **knife** to cut this meat.\n→ I bought a **kilo of apples**.\n→ How much is a **loaf of bread**?"},
-    {type:"check", question:"Wat betekent 'a jar of jam'?", answer:"een pot jam/pot jam", hint:"Een glazen pot met jam"},
-    {type:"check", question:"Vertaal naar het Engels: een fles water", answer:"a bottle of water", hint:"bottle = fles"},
-    {type:"check", question:"Wat betekent 'mug'?", answer:"de mok/mok/de beker/beker", hint:"Een grote beker met rechte zijkanten"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen glazen verpakking gevuld met jam", answer:"a jar of jam", hint:"jar = pot"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen glazen of plastic verpakking met een dun bovendeel, gevuld met water", answer:"a bottle of water", hint:"bottle = fles"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\neen grote beker met rechte zijkanten", answer:"mug", hint:"3 letters"},
   ],
   bijv: [
     {type:"explain", title:"Bijvoeglijke naamwoorden — smaak & mening",
      text:"Adjectives om te zeggen hoe iets smaakt of hoe je iets vindt.\n\n"+wordListText(BIJV)+"\n\nLet op het verschil:\n→ **delicious** = heerlijk (eten/drinken)\n→ **lovely** = heerlijk, mooi, leuk (algemeen positief)\n→ **disgusting** = vies, walgelijk (sterk negatief)"},
     {type:"explain", title:"Voorbeeldzinnen",
      text:"→ This soup is **delicious**!\n→ I thought that film was a bit **boring**.\n→ We watched an **exciting** film last night.\n→ This book is very **interesting**.\n→ What a **disgusting** smell!\n→ We had a **lovely** holiday."},
-    {type:"check", question:"Wat betekent 'disgusting'?", answer:"vies/walgelijk", hint:"Hele negatieve smaak/reactie"},
-    {type:"check", question:"Vertaal: spannend", answer:"exciting", hint:"Begint met 'exc-'"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\nheel onaangenaam, walgelijk", answer:"disgusting", hint:"Begint met D"},
+    {type:"check", question:"Welk Engels woord wordt hier omschreven?\n\niets dat sterke gevoelens van blijheid en enthousiasme geeft", answer:"exciting", hint:"Begint met 'exc-'"},
   ],
 };
 
